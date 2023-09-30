@@ -39,26 +39,35 @@ myproject/                 <-- Root project directory
 │   │   └── ...
 │   ├── templates/         <-- Django templates (HTML)
 │   ├── static/            <-- Static files (CSS, JS, images)
+│   │   ├── js/            <-- JavaScript files for the backend
+│   │   ├── ...
 │   ├── requirements.txt   <-- Python dependencies
 │   ├── .gitignore        <-- Git ignore file
 │   ├── db.sqlite3        <-- SQLite database file (or other DB)
 │   └── ...
 │
 ├── frontend/              <-- Frontend project directory
-│   ├── frontendproject/   <-- React frontend project
+│   ├── frontendenv/      <-- Virtual environment for frontend
+│   ├── frontendproject/  <-- React frontend project
 │   │   ├── public/        <-- Public assets
 │   │   ├── src/           <-- React source code
 │   │   │   ├── components/  <-- React components
 │   │   │   │   ├── App.js    <-- Main React component
 │   │   │   │   └── ...
 │   │   │   ├── App.css    <-- CSS styles for the frontend
-│   │   │   └── index.js   <-- Entry point for the React app
+│   │   │   ├── index.js   <-- Entry point for the React app
+│   │   │   ├── threejs/    <-- Three.js JavaScript files
+│   │   │   │   ├── scene.js     <-- Three.js scene setup
+│   │   │   │   ├── camera.js    <-- Three.js camera configuration
+│   │   │   │   ├── renderer.js  <-- Three.js renderer setup
+│   │   │   │   └── ...
 │   │   ├── package.json  <-- Node.js package configuration
 │   │   ├── node_modules/  <-- Node.js modules for frontend
 │   │   └── ...
 │   └── ...
 │
 └── venv/                  <-- Common virtual environment (optional)
+
 
 ```
 
@@ -67,65 +76,77 @@ myproject/                 <-- Root project directory
 
 - **myproject/**: This is the root directory of your entire project. It contains both the backend and frontend project directories.
 
-  - **backend/**: This is the directory where you keep all your Django backend-related files. It includes the Django project (`backendproject`), the virtual environment (`backendenv`), and any Django apps you create.
-  
+  - **backend/**: This directory contains all your Django backend-related files. It includes the Django project (backendproject), the virtual environment (backendenv), and any Django apps you create.
+
     - **backendenv/**: This directory contains the virtual environment specifically for the Django backend. It's isolated from the system-wide Python environment and holds all the backend dependencies.
-    
-    - **backendproject/**: This is the Django project directory for your backend. It contains the `settings.py`, `urls.py`, and other Django project files.
-    
+
+    - **backendproject/**: This is the Django project directory for your backend. It contains the settings.py, urls.py, and other Django project files.
+
       - **backendproject/**: Project settings and configuration.
-    
+
       - **apiapp/**: Django app for the API.
-    
+
         - **migrations/**: Database migration files.
-        
+
         - **admin.py**: Admin site configuration.
-        
+
         - **apps.py**: App configuration.
-        
+
         - **models.py**: Data models for the API.
-        
+
         - **serializers.py**: API serializers.
-        
+
         - **views.py**: API views and endpoints.
-        
+
         - ... (other app-specific files)
-    
-    - **manage.py**: Django management script.
-    
+
+      - **manage.py**: Django management script.
+
     - **templates/**: Django templates (HTML).
-    
+
     - **static/**: Static files (CSS, JS, images).
-    
+
     - **requirements.txt**: Python dependencies.
-    
+
     - **.gitignore**: Git ignore file.
-    
+
     - **db.sqlite3**: SQLite database file (or other DB).
-  
-  - **frontend/**: This is the directory where you keep all your frontend-related files. It includes the React.js frontend project (`frontendproject`) and the `node_modules` directory, which contains Node.js modules for frontend development.
-    
+
+  - **frontend/**: This directory contains all your frontend-related files. It includes the React.js frontend project (frontendproject), the virtual environment (frontendenv), and the node_modules directory, which contains Node.js modules for frontend development.
+
+    - **frontendenv/**: This directory contains the virtual environment specifically for the frontend. It's isolated from the system-wide Python environment and holds all the frontend dependencies.
+
     - **frontendproject/**: This directory contains your React.js and Three.js frontend project files. It's isolated from the backend project and has its own development environment.
-    
+
       - **public/**: Public assets.
-      
+
       - **src/**: React source code.
-      
+
         - **components/**: React components.
-        
+
           - **App.js**: Main React component.
-          
+
           - ... (other components)
-        
+
         - **App.css**: CSS styles for the frontend.
-        
+
         - **index.js**: Entry point for the React app.
-      
+
+        - **threejs/**: Three.js JavaScript files.
+
+          - **scene.js**: Three.js scene setup.
+
+          - **camera.js**: Three.js camera configuration.
+
+          - **renderer.js**: Three.js renderer setup.
+
+          - ... (other Three.js files)
+
       - **package.json**: Node.js package configuration.
-      
+
       - **node_modules/**: Node.js modules for frontend.
-    
-  - **venv/** (optional): This is an optional common virtual environment directory that you can create if you prefer to keep your virtual environment separate from the backend and frontend. However, it's often recommended to have separate virtual environments for each part of your project for better isolation.
+
+- **venv/** (optional): This is an optional common virtual environment directory that you can create if you prefer to keep your virtual environment separate from the backend and frontend. However, it's often recommended to have separate virtual environments for each part of your project for better isolation.
 
 Please note that this is an illustrative example, and you can adapt it to your specific project's needs by adding or removing files and directories as necessary.
 
