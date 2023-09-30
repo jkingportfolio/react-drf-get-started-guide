@@ -372,6 +372,25 @@ In your terminal, navigate to the directory where you want to create the React.j
 cd /path/to/your/frontend/directory
 ```
 
+Create a new virtual environment (replace venv with your desired virtual environment name):
+``` bash
+python -m venv frontendenv
+```
+
+Activate the virtual environment:
+On Windows:
+
+```bash
+venv\Scripts\activate
+```
+On macOS and Linux:
+
+```bash
+source venv/bin/activate
+```
+
+Now, you can proceed to create the frontendproject directory and set up your React.js project within the virtual environment:
+
 Create a new directory for your frontend project (replace frontendproject with your desired project name):
 
 ```bash
@@ -405,7 +424,7 @@ Install the Axios library using npm:
 npm install axios
 ```
 
-This makes Axios available for making HTTP requests in your React application.
+By following these steps, you have created a virtual environment in the frontend directory and set up your React.js project within that virtual environment. This isolates the project's Python dependencies from the system-wide dependencies and ensures a clean environment for your React.js development.
 
 ### Install Three.js for 3D Graphics
 Install the Three.js library using npm:
