@@ -381,12 +381,12 @@ Activate the virtual environment:
 On Windows:
 
 ```bash
-venv\Scripts\activate
+frontendvenv\Scripts\activate
 ```
 On macOS and Linux:
 
 ```bash
-source venv/bin/activate
+source frontendvenv/bin/activate
 ```
 
 Now, you can proceed to create the frontendproject directory and set up your React.js project within the virtual environment:
