@@ -77,6 +77,30 @@ Create a new Django project for your backend:
 ```bash
 django-admin startproject backendproject .
 ````
+
+### Initial Migration and Additional Migrations
+Before proceeding, let's perform the initial database migration. In your terminal, while in the backendproject directory (where manage.py is located), run the following commands:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+This initializes the database schema based on your project's initial configuration.
+
+Note: You should create additional migrations whenever you make changes to your models, serializers, or database schema. Each migration corresponds to a change in your database structure. For example, if you add a new model or modify an existing one, you need to create a migration to reflect those changes in the database.
+
+To create a migration for model changes, run:
+
+```bash
+python manage.py makemigrations
+```
+
+To apply the pending migrations, run:
+
+```bash
+python manage.py migrate
+```
+
 ### Create a Django App for the API
 Inside your Django project, create an app to handle your API (replace apiapp with your desired app name):
 
