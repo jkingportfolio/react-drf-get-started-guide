@@ -1,4 +1,4 @@
-# Comprehensive Guide: Django REST Framework Backend and React.js Frontend with Three.js
+# Comprehensive Guide: Django REST Framework Backend and React.js Frontend with Three.js  [![My Skills](https://skillicons.dev/icons?i=django,react,threejs&theme=dark)](https://skillicons.dev)
 
 This comprehensive guide is designed to help developers set up a full-stack web development environment using Django REST Framework for the backend and React.js with Three.js for the frontend. Whether you're starting a new project or looking to integrate a powerful backend with a dynamic 3D frontend, this guide covers all the necessary steps, from environment setup to connecting your frontend and backend seamlessly. 
 
